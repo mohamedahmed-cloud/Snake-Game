@@ -1,4 +1,4 @@
-package com.example.snake;
+package com.example.snakegamefinal;
 //package com.example.sankepersoanalwork;
 
 import javafx.animation.AnimationTimer;
@@ -27,19 +27,20 @@ import java.util.Random;
 
 
 public class advancedSnake extends Application {
-    static int speed = 6;
+    static int speed = 7;
     static int foodcolor = 0;
-    static int width = 20;
+    static int width = 32;
     static int height = 20;
     static int foodX = 0;
     static int foodY = 0;
     static int cornersize = 25;
     static List<Corner> snake = new ArrayList<>();
     static Dir direction = Dir.left;
+    static Dir direction2=Dir.left;
     static boolean gameOver = false;
     static Random rand = new Random();
     //    Second
-    static int speed2 = 6;
+    static int speed2 = 7;
     static int foodX2 = 0;
     static int foodY2 = 0;
     static List<Corner> snake2 = new ArrayList<>();
@@ -85,7 +86,7 @@ public class advancedSnake extends Application {
         box.setSpacing(20);
         box.setAlignment(Pos.CENTER);
         box.getChildren().addAll(btnStart,btnAbout, btnEnd);
-        Scene scene = new Scene(box, 800, 400);
+        Scene scene = new Scene(box, 800, 500);
         //        Scene Style
         scene.setFill(Color.BLACK);
         //        Stage style
@@ -184,7 +185,7 @@ public class advancedSnake extends Application {
                 Scene sceneAbout=new Scene(grid,1000,600);
                 primaryStageAbout.setResizable(false);
                 primaryStageAbout.setScene(sceneAbout);
-                primaryStageAbout.setTitle("About");
+                primaryStageAbout.setTitle("           About");
                 grid.setStyle("-fx-background-color: #bbdefb;");
                 primaryStageAbout.initStyle(StageStyle.UTILITY);
                 primaryStageAbout.show();
@@ -217,7 +218,7 @@ public class advancedSnake extends Application {
             box2.setAlignment(Pos.CENTER);
             box2.getChildren().addAll(playWithBorder, playWithNoBorder, returnto, exit);
             box2.setStyle("-fx-background-color: BLACK;");
-            Scene scene2 = new Scene(box2, 800, 400);
+            Scene scene2 = new Scene(box2, 800, 500);
             //           Scene Style
             scene2.setFill(Color.BLACK);
             //          Stage style
@@ -282,23 +283,23 @@ public class advancedSnake extends Application {
 
                     // control
                     scene.addEventFilter(KeyEvent.KEY_PRESSED, key -> {
-                        if (key.getCode() == KeyCode.UP) {
+                        if (key.getCode() == KeyCode.UP || key.getCode()==KeyCode.W) {
                             direction = Dir.up;
                         }
-                        if (key.getCode() == KeyCode.LEFT) {
-                            direction = Dir.left;
-                        }
-                        if (key.getCode() == KeyCode.DOWN) {
+                        if (key.getCode() == KeyCode.DOWN || key.getCode()==KeyCode.S) {
                             direction = Dir.down;
                         }
-                        if (key.getCode() == KeyCode.RIGHT) {
+                        if (key.getCode() == KeyCode.LEFT || key.getCode()==KeyCode.A) {
+                            direction = Dir.left;
+                        }
+                        if (key.getCode() == KeyCode.RIGHT || key.getCode()==KeyCode.D) {
                             direction = Dir.right;
                         }
                     });
                     // Body Of Snake When Start Play
-                    snake.add(new Corner(width / 2, height / 2));
-                    snake.add(new Corner(width / 2, height / 2));
-                    snake.add(new Corner(width / 2, height / 2));
+                    snake.add(new Corner(width / 3, height / 2));
+                    snake.add(new Corner(width / 3, height / 2));
+                    snake.add(new Corner(width / 3, height / 2));
                     Stage primaryStage3 = new Stage();
                     primaryStage3.setScene(scene);
                     primaryStage3.initStyle(StageStyle.UTILITY);
@@ -342,17 +343,17 @@ public class advancedSnake extends Application {
 
                     // control
                     scene.addEventFilter(KeyEvent.KEY_PRESSED, key -> {
-                        if (key.getCode() == KeyCode.UP) {
-                            direction = Dir.up;
+                        if (key.getCode() == KeyCode.UP ||key.getCode()==KeyCode.W) {
+                            direction2 = Dir.up;
                         }
-                        if (key.getCode() == KeyCode.LEFT) {
-                            direction = Dir.left;
+                        if (key.getCode() == KeyCode.DOWN || key.getCode()==KeyCode.S) {
+                            direction2 = Dir.down;
                         }
-                        if (key.getCode() == KeyCode.DOWN) {
-                            direction = Dir.down;
+                        if (key.getCode() == KeyCode.LEFT || key.getCode()==KeyCode.A) {
+                            direction2 = Dir.left;
                         }
-                        if (key.getCode() == KeyCode.RIGHT) {
-                            direction = Dir.right;
+                        if (key.getCode() == KeyCode.RIGHT || key.getCode()==KeyCode.D) {
+                            direction2 = Dir.right;
                         }
 
                     });
@@ -380,11 +381,12 @@ public class advancedSnake extends Application {
 
     }
     //Main Function One
+//        Play With No Border
     public static void Tick1(GraphicsContext gc) {
         if (gameOver) {
             gc.setFill(Color.RED);
             gc.setFont(new Font("", 50));
-            gc.fillText("GAME OVER", 100, 250);
+            gc.fillText("GAME OVER", 250, 250);
             return ;
         }
 //        Make Snake Body Move With other
@@ -441,7 +443,7 @@ public class advancedSnake extends Application {
         // score
         gc.setFill(Color.WHITE);
         gc.setFont(new Font( 30));
-        gc.fillText("Your Score: " + (speed - 6), 10, 30);
+        gc.fillText("Your Score: " + (speed - 8), 10, 30);
         // random foodColor
 //        Initial color
         Color foodColor = Color.WHITE;
@@ -483,12 +485,18 @@ public class advancedSnake extends Application {
 
         }
     }
+
+
+
+
+
     //Main Function Two
+//      Play With Solid Border
     public static void tick(GraphicsContext gc) {
         if (gameOver2) {
             gc.setFill(Color.RED);
             gc.setFont(new Font("", 50));
-            gc.fillText("GAME OVER", 100, 250);
+            gc.fillText("GAME OVER", 250, 250);
             return ;
         }
 //        Make Snake Body Move With other
@@ -497,12 +505,11 @@ public class advancedSnake extends Application {
             snake2.get(i).y = snake2.get(i - 1).y;
         }
 
-        switch (direction) {
+        switch (direction2) {
             case up:
                 snake2.get(0).y--;
                 if (snake2.get(0).y < 0) {
                     gameOver2=true;
-//                    gameOver = true;
                 }
                 break;
             case down:
@@ -545,7 +552,7 @@ public class advancedSnake extends Application {
         // score
         gc.setFill(Color.WHITE);
         gc.setFont(new Font( 30));
-        gc.fillText("Your Score: " + (speed2 - 6), 10, 30);
+        gc.fillText("Your Score: " + (speed2 - 8), 10, 30);
         // random foodColor
 //        Initial color
         Color foodColor2 = Color.WHITE;

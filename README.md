@@ -1,6 +1,6 @@
 # Snake-Game
 Our Snake Game 
-- #### ***First Window***
+- #### ***`First Window`***
 <img src="./Images/Main1.png" alt="Main Page"/>
 
 -----
@@ -37,7 +37,7 @@ Our Snake Game
 <img src="./Images/playWithSolidBorder.png" alt="Solid border playing">
 
 ----
-- #### ***Game Over When `Playing With Solid border` ***
+- #### ***Game Over When `Playing With Solid border`***
   <img src="./Images/GameOverWhenSolidBorder.png">
 
 ---

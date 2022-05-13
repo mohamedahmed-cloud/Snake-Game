@@ -16,7 +16,7 @@ Our Snake Game
 ----
 
 - #### ***Second Window After Playing `withborder`***
-<img src="./afterPlayingSolid%20Border.png" alt="After Playin with no border">
+<img src="./afterPlayingSolidBorder.png" alt="After Playing with no border">
 
 ----
 

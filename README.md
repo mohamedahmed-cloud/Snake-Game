@@ -1,45 +1,56 @@
 # Snake-Game
 Our Snake Game 
 - #### ***First Window***
-<img src="./Main.png" alt="Main Page"/>
+<img src="./Images/Main1.png" alt="Main Page"/>
 
 -----
 
-- #### ***First Window After Cick on `About`***
-<img src="./About.png" alt="About Page"/>
+- #### ***`About`Page After click on About in Fist Page***
+<img src="./Images/About.png" alt="About Page"/>
 
 ----
 
-- #### ***Second Window*** 
-<img src="Main2.png" alt="Main page 2"/>
+- #### ***Main Window Two After Click on `Start`*** 
+<img src="./Images/Main2.png" alt="Main page 2"/>
 
 ----
 
-- #### ***Second Window After Playing `withborder`***
-<img src="./afterPlayingSolidBorder.png" alt="After Playing with no border">
+- #### ***Second Window After Click on `Playing with Solid border`***
+<img src="./Images/Main2AfterPlayWithSolidBorder.png" alt="After Playing with no border">
 
 ----
 
-- #### ***Second Window After Playing `With NO Border`***
+-  #### ***Second Window After Click on `Playing with No border`***
   
-<img src="./afterPlayingNoBorder.png" alt="After Playin with no border">
+<img src="./Images/Main2AfterPlayWithNoBorder.png" alt="After Playin with no border">
 
 ----
 
 - #### ***Second Window After `Click return`***
 
-<img src="./Main.png" alt="After Click Return" >
+<img src="./Images/Main1.png" alt="After Click Return" >
+
+----
+## Snake Game 
+
+- #### ***Third Window when Clicking `Play with Solid border`***
+<img src="./Images/playWithSolidBorder.png" alt="Solid border playing">
+
+----
+- #### ***Game Over When `Playing With Solid border` ***
+  <img src="./Images/GameOverWhenSolidBorder.png">
+
+---
+
+
+- #### ***Third Window when Clicking `Play with No border`***
+<img src="./Images/playWithNoBorder.png" alt="No border playing">
 
 ----
 
-- #### ***Window when playing `withborder`***
-<img src="./playWithSolidBorder.png" alt="Solid border playing">
-
-----
-
-- #### ***Window when playing `With NO Border`***
-<img src="./playWithNoBorder.png" alt="No border playing">
-
+- #### ***Game Over When `Playing With No border`***
+ 
+ <img src="./Images/GameOverWhenNoBorder.png">
 
 
 

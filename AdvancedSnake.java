@@ -12,6 +12,8 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.GridPane;
@@ -90,8 +92,11 @@ public class advancedSnake extends Application {
         //        Scene Style
         scene.setFill(Color.BLACK);
         //        Stage style
-        primaryStage.initStyle(StageStyle.UTILITY);
-        primaryStage.setTitle("          Snake Window Start ");
+        Image image= new Image("https://cdn-icons-png.flaticon.com/128/5968/5968282.png");
+        primaryStage.getIcons().add(image);
+
+//        primaryStage.initStyle(StageStyle.UTILITY);
+        primaryStage.setTitle(" Snake Window Start ");
         //      To Launch
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
@@ -184,10 +189,12 @@ public class advancedSnake extends Application {
                 Stage primaryStageAbout=new Stage();
                 Scene sceneAbout=new Scene(grid,1000,600);
                 primaryStageAbout.setResizable(false);
+
+                Image imageAbout=new Image("https://cdn-icons-png.flaticon.com/512/1256/1256650.png");
+                primaryStageAbout.getIcons().add(imageAbout);
                 primaryStageAbout.setScene(sceneAbout);
-                primaryStageAbout.setTitle("           About");
+                primaryStageAbout.setTitle(" About");
                 grid.setStyle("-fx-background-color: #bbdefb;");
-                primaryStageAbout.initStyle(StageStyle.UTILITY);
                 primaryStageAbout.show();
             }
         });
@@ -223,10 +230,12 @@ public class advancedSnake extends Application {
             scene2.setFill(Color.BLACK);
             //          Stage style
             Stage primaryStage2 = new Stage();
-            primaryStage2.initStyle(StageStyle.UTILITY);
+            Image image2=new Image("https://cdn-icons-png.flaticon.com/512/840/840513.png");
+            primaryStage2.getIcons().add(image2);
+//            primaryStage2.initStyle(StageStyle.UTILITY);
             //          to Launch
             //           End Second Window
-            primaryStage2.setTitle("          Choose What You want  ");
+            primaryStage2.setTitle(" Choose What You want  ");
             primaryStage2.setScene(scene2);
             primaryStage2.show();
             primaryStage2.setResizable(false);
@@ -302,9 +311,11 @@ public class advancedSnake extends Application {
                     snake.add(new Corner(width / 3, height / 2));
                     Stage primaryStage3 = new Stage();
                     primaryStage3.setScene(scene);
-                    primaryStage3.initStyle(StageStyle.UTILITY);
+//                    primaryStage3.initStyle(StageStyle.UTILITY);
+                    Image image3=new Image("https://t3.ftcdn.net/jpg/00/99/64/94/240_F_99649474_ZDHlfVnKP2kRvpSk31lAhc5bjBfh9QqZ.jpg");
+                    primaryStage3.getIcons().add(image3);
                     primaryStage3.setResizable(false);
-                    primaryStage3.setTitle("           Snake Game With No Border ");
+                    primaryStage3.setTitle(" Snake Game With No Border");
                     primaryStage3.show();
 
 
@@ -367,9 +378,11 @@ public class advancedSnake extends Application {
                     //            scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
                     Stage primaryStage4=new Stage();
                     primaryStage4.setScene(scene);
-                    primaryStage4.initStyle(StageStyle.UTILITY);
+//                    primaryStage4.initStyle(StageStyle.UTILITY);
+                    Image image4 =new Image("https://img.icons8.com/external-wanicon-flat-wanicon/344/external-snake-st-patrick-day-wanicon-flat-wanicon.png");
+                    primaryStage4.getIcons().add(image4);
                     primaryStage4.setResizable(false);
-                    primaryStage4.setTitle("          Snake Game With Solid Border ");
+                    primaryStage4.setTitle(" Snake Game With Solid Border ");
                     primaryStage4.show();
 
 
@@ -594,7 +607,6 @@ public class advancedSnake extends Application {
 
         }
     }
-
     public static void main(String[] args) {
         launch(args);
     }

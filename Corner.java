@@ -1,13 +1,13 @@
-package com.example.snakegamefinal;
-
+package com.example.snakegame;
+//Make the body of Snake
 public  class Corner {
-        int x;
-        int y;
+    int x;
+    int y;
 
-        public Corner(int x, int y) {
-            this.x = x;
-            this.y = y;
-        }
-
+    public Corner(int x, int y) {
+        this.x = x;
+        this.y = y;
     }
+
+}
 
